@@ -2,5 +2,66 @@
   "extends": "./tsconfig.base.json",
   "compileOnSave": false,
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./apps/api-gateway-e2e"
+    },
+    {
+      "path": "./apps/api-gateway"
+    },
+    {
+      "path": "./apps/auth-e2e"
+    },
+    {
+      "path": "./apps/auth"
+    },
+    {
+      "path": "./apps/user-e2e"
+    },
+    {
+      "path": "./apps/user"
+    },
+    {
+      "path": "./apps/analytics-e2e"
+    },
+    {
+      "path": "./apps/analytics"
+    },
+    {
+      "path": "./apps/product-e2e"
+    },
+    {
+      "path": "./apps/product"
+    },
+    {
+      "path": "./apps/notification-e2e"
+    },
+    {
+      "path": "./apps/notification"
+    },
+    {
+      "path": "./apps/order-e2e"
+    },
+    {
+      "path": "./apps/order"
+    },
+    {
+      "path": "./apps/search-e2e"
+    },
+    {
+      "path": "./apps/search"
+    },
+    {
+      "path": "./apps/chat-e2e"
+    },
+    {
+      "path": "./apps/chat"
+    },
+    {
+      "path": "./apps/payment-e2e"
+    },
+    {
+      "path": "./apps/payment"
+    }
+  ]
 }

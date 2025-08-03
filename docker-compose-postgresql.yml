@@ -1,0 +1,136 @@
+services:
+  api-gateway:
+    image: postgres:latest
+    container_name: api-gateway
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: api-gateway
+    ports:
+      - '5500:5432'
+    volumes:
+      - api-gateway_db_data:/var/lib/postgresql/data
+  auth-service:
+    image: postgres:latest
+    container_name: auth-service
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: auth
+    ports:
+      - '5501:5432'
+    volumes:
+      - auth_db_data:/var/lib/postgresql/data
+  user-service:
+    image: postgres:latest
+    container_name: user-service
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: user
+    ports:
+      - '5502:5432'
+    volumes:
+      - user_db_data:/var/lib/postgresql/data
+  product-service:
+    image: postgres:latest
+    container_name: product-service
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: product
+    ports:
+      - '5503:5432'
+    volumes:
+      - product_db_data:/var/lib/postgresql/data
+  order-service:
+    image: postgres:latest
+    container_name: order-service
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: order
+    ports:
+      - '5504:5432'
+    volumes:
+      - order_db_data:/var/lib/postgresql/data
+
+  payment-service:
+    image: postgres:latest
+    container_name: payment-service
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: payment
+    ports:
+      - '5505:5432'
+    volumes:
+      - payment_db_data:/var/lib/postgresql/data
+  notification-service:
+    image: postgres:latest
+    container_name: notification-service
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: notification
+    ports:
+      - '5506:5432'
+    volumes:
+      - notification_db_data:/var/lib/postgresql/data
+
+  chat-service:
+    image: postgres:latest
+    container_name: chat-service
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: chat
+    ports:
+      - '5507:5432'
+    volumes:
+      - chat_db_data:/var/lib/postgresql/data
+
+  analytics-service:
+    image: postgres:latest
+    container_name: analytics-service
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: analytics
+    ports:
+      - '5508:5432'
+    volumes:
+      - analytics_db_data:/var/lib/postgresql/data
+
+  search-service:
+    image: postgres:latest
+    container_name: search-service
+    restart: always
+    environment:
+      POSTGRES_USER: quochau151
+      POSTGRES_PASSWORD: Hau123456@
+      POSTGRES_DB: search
+    ports:
+      - '5509:5432'
+    volumes:
+      - search_db_data:/var/lib/postgresql/data
+volumes:
+  api-gateway_db_data:
+  auth_db_data:
+  user_db_data:
+  product_db_data:
+  order_db_data:
+  payment_db_data:
+  notification_db_data:
+  chat_db_data:
+  analytics_db_data:
+  search_db_data:

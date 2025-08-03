@@ -1,0 +1,26 @@
+{
+  "name": "@nestjs-microservices/notification-e2e",
+  "version": "0.0.1",
+  "private": true,
+  "nx": {
+    "implicitDependencies": [
+      "@nestjs-microservices/notification"
+    ],
+    "targets": {
+      "e2e": {
+        "executor": "@nx/jest:jest",
+        "outputs": [
+          "{projectRoot}/test-output/jest/coverage"
+        ],
+        "options": {
+          "jestConfig": "apps/notification-e2e/jest.config.ts",
+          "passWithNoTests": true
+        },
+        "dependsOn": [
+          "@nestjs-microservices/notification:build",
+          "@nestjs-microservices/notification:serve"
+        ]
+      }
+    }
+  }
+}

@@ -27,7 +27,7 @@ async function bootstrap() {
     {
       transport: Transport.RMQ,
       options: {
-        urls: ['amqp://14.241.251.180:5672'],
+        urls: ['amqp://kalo:kalo@14.241.251.180:5672'],
         queue: 'auth-queue',
       },
     }

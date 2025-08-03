@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
+import { ClientsModule, Transport } from '@nestjs/microservices';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
   imports: [
@@ -30,7 +30,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
         name: 'RABBITMQ_SERVICE',
         transport: Transport.RMQ,
         options: {
-          urls: ['amqp://14.241.251.180:5672'],
+          urls: ['amqp://kalo:kalo@14.241.251.180:5672'],
           queue: 'search-queue',
         },
       },

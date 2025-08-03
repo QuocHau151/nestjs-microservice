@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
+import { ClientsModule, Transport } from '@nestjs/microservices';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { ClientsModule, Transport } from '@nestjs/microservices';
 
 @Module({
   imports: [
@@ -16,6 +16,22 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
           consumer: {
             groupId: 'product-consumer',
           },
+        },
+      },
+      {
+        name: 'RABBITMQ_SERVICE',
+        transport: Transport.RMQ,
+        options: {
+          urls: ['amqp://kalo:kalo@14.241.251.180:5672'],
+          queue: 'product-queue',
+        },
+      },
+      {
+        name: 'REDIS_SERVICE',
+        transport: Transport.REDIS,
+        options: {
+          host: '14.241.251.180',
+          port: 6301,
         },
       },
     ]),

@@ -1,4 +1,3 @@
-
 /**
  * This is not a production server yet!
  * This is only a minimal backend to get started.
@@ -28,7 +27,7 @@ async function bootstrap() {
     {
       transport: Transport.RMQ,
       options: {
-        urls: ['amqp://14.241.251.180:5672'],
+        urls: ['amqp://kalo:kalo@14.241.251.180:5672'],
         queue: 'product-queue',
       },
     }
